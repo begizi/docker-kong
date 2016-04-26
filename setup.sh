@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sed -i "s/kongDatabase/$KONG_DATABASE_ENV_DOCKERCLOUD_NODE_HOSTNAME/g" /etc/kong/kong.yml
+sed -i "s/kongDatabase/$KONG_DATABASE_PORT_5432_TCP_ADDR/g" /etc/kong/kong.yml
 
 # Setting up the proper database
 if [ -n "$DATABASE" ]; then

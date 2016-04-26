@@ -6,6 +6,7 @@ postgres:
 cassandra:
   contact_points:
     - "kongDatabase:9042"
+dns_resolver: server
 nginx: |
   {{user}}
   worker_processes auto;

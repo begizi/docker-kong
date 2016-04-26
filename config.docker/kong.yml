@@ -1,15 +1,11 @@
 postgres:
-  host: "kong-database"
+  host: "kongDatabase"
   port: 5432
   database: kong
   user: kong
 cassandra:
   contact_points:
-    - "kong-database:9042"
-dns_resolver: server
-dns_resolvers_available:
-  server:
-    address: "127.0.0.1:53"
+    - "kongDatabase:9042"
 nginx: |
   {{user}}
   worker_processes auto;
